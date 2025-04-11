@@ -16,16 +16,6 @@ images: ['/static/images/twitter-card.png']
 
 ## そもそもSGDとは？
 
-{/\*
-
-<video controls>
-  <source
-    src="https://github-production-user-asset-6210df.s3.amazonaws.com/28362229/258559849-2124c81f-b99d-4431-839c-347e01a2616c.webm"
-    type="video/webm"
-  />
-</video>
-*/}
-
 通常の勾配降下法は、全データに対して損失関数の勾配を計算して更新する方法です(バッチ勾配降下法とも呼ばれます)。
 一方、SGDは「データ1件 or 小さなバッチ単位」で勾配を計算・更新する手法です。
 
@@ -49,22 +39,6 @@ images: ['/static/images/twitter-card.png']
   - クラスタリング or 潜在変数モデルの最適化
     - Autoencoder, RED-KC などの内部で使う
 
-{/\*
-
-```diff-js:siteMetadata.js
-analytics: {
--   umamiAnalytics: {
--     // We use an env variable for this site to avoid other users cloning our analytics ID
--     umamiWebsiteId: process.env.NEXT_UMAMI_ID, // e.g. 123e4567-e89b-12d3-a456-426614174000
--   },
-+    plausibleAnalytics: {
-+      plausibleDataDomain: '', // e.g. tailwind-nextjs-starter-blog.vercel.app
-+    },
-},
-```
-
-\*/}
-
 ## 使えない or 工夫が必要なケース
 
 - 損失関数が微分不可能
@@ -79,17 +53,9 @@ RED-KCは、Autoencoder + K-means の構成で:
 - Autoencoder の学習 → 微分可能なニューラルネットワーク → SGD使える！◎
   クラスタリング（δ-ノルム付き） → 損失関数が勾配計算可能なら、SGDまたは近似最適化で対応できる！
 
-{/\*
-
-## Licence
-
-\*/}
-
 {/_
 [MIT](https://github.com/timlrx/tailwind-nextjs-starter-blog/blob/main/LICENSE) © [Timothy Lin](https://www.timrlx.com)
 _/}
-
-{/* [^1]: The previous... */}
 
 {/_
 [^2]: This is different from Next.js App Directory layouts and are best thought of as reusable React containers.
