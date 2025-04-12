@@ -1,0 +1,26 @@
+---
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} >
+    <title>Astro</title>
+  </head>
+  <body>
+    <a href="/">Home</a>
+    <a href="/about/">About</a>
+    <h1>確率的勾配降下法が使える条件について調べてみた</h1>
+    <p>自然言語処理の基礎 2-6-c項 "最尤推定によるパラメータ推定にて、目的関数に確率的勾配降下法を適用できる条件って何だったかなと気になったので調べてみました。"</p>
+    <h2>そもそもSGDとは？</h2>
+    <p>通常の勾配降下法は、全データに対して損失関数の勾配を計算して更新する方法 (バッチ勾配降下法)。一方、確率的勾配降下法 (SGD) は「データ1件 or 小さなバッチ単位」で勾配を計算・更新する手法。</p>
+    <h2>確率的勾配降下法が使える条件 (理論面) </h2>
+    <h3>損失関数が微分可能</h3>
+    <p>パラメータに対して勾配 (導関数) が定義されていることが必要です。</p>
+    <h3>最適化したい関数が期待値の形式になっている</h3>
+    <h3>損失関数が連続 or 局所的に滑らか</h3>
+    <p>勾配が安定して推移することが求められます。そうでないと発散してしまいます。</p>
+  </body>
+</html>
